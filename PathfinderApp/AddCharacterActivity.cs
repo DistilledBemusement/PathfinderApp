@@ -16,6 +16,7 @@ namespace PathfinderApp
                         SetContentView(Resource.Layout.AddCharacter);
                         Character newCharacter = new Character();
                         Button AddPersonButton = FindViewById<Button>(Resource.Id.AddPersonButton);
+                        EditText editName = FindViewById<EditText>(Resource.Id.editTextName);
                         EditText editSTR = FindViewById<EditText>(Resource.Id.editTextSTR);
                         EditText editDEX = FindViewById<EditText>(Resource.Id.editTextDEX);
                         EditText editCON = FindViewById<EditText>(Resource.Id.editTextCON);
@@ -34,6 +35,9 @@ namespace PathfinderApp
 
                                 var intent = new Intent(this, typeof(CharGenActivity));
                                 StartActivity(intent);
+                        };
+                        editName.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+                                newCharacter.Name = editName.Text;
                         };
                         editSTR.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
                                 CharacterAttribute newAttr = new CharacterAttribute(Convert.ToInt32(editSTR.Text));
