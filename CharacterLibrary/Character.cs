@@ -6,13 +6,13 @@ using System.Text;
 namespace CharacterLibrary
 {
         public class Character {
-                string Name;
-                CharacterAttribute STR = new CharacterAttribute();
-                CharacterAttribute DEX = new CharacterAttribute();
-                CharacterAttribute CON = new CharacterAttribute();
-                CharacterAttribute INT = new CharacterAttribute();
-                CharacterAttribute WIS = new CharacterAttribute();
-                CharacterAttribute CHA = new CharacterAttribute();
+                public string Name;
+                public CharacterAttribute STR = new CharacterAttribute();
+                public CharacterAttribute DEX = new CharacterAttribute();
+                public CharacterAttribute CON = new CharacterAttribute();
+                public CharacterAttribute INT = new CharacterAttribute();
+                public CharacterAttribute WIS = new CharacterAttribute();
+                public CharacterAttribute CHA = new CharacterAttribute();
 
                 public void SkillAdd (string Name, CharacterAttribute ATR, int Ranks, Boolean Favoured) {
                         Skill newSkill = new Skill(Name, ATR, Ranks, Favoured);

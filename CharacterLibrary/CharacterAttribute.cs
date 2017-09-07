@@ -11,8 +11,14 @@ using Android.Widget;
 
 namespace CharacterLibrary {
         public class CharacterAttribute {
-                int AttributeScore;
-                int AttributeModifer;
+                public int AttributeScore;
+                public int AttributeModifer;
+
+                public CharacterAttribute(int Score)
+                {
+                        AttributeScore = Score;
+                        CalculateModifer();
+                }
 
                 public void CalculateModifer () {
                         double startingValue = (AttributeScore - 10) / 2;

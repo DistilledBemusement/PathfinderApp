@@ -41,6 +41,97 @@ namespace PathfinderApp
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f040017
+			public const int AddPersonButton = 2130968599;
+			
+			// aapt resource value: 0x7f040018
+			public const int CharGenButton = 2130968600;
+			
+			// aapt resource value: 0x7f040019
+			public const int SkillSelectButton = 2130968601;
+			
+			// aapt resource value: 0x7f040015
+			public const int editTextCHA = 2130968597;
+			
+			// aapt resource value: 0x7f04000f
+			public const int editTextCON = 2130968591;
+			
+			// aapt resource value: 0x7f04000d
+			public const int editTextDEX = 2130968589;
+			
+			// aapt resource value: 0x7f040011
+			public const int editTextINT = 2130968593;
+			
+			// aapt resource value: 0x7f040002
+			public const int editTextName = 2130968578;
+			
+			// aapt resource value: 0x7f04000b
+			public const int editTextSTR = 2130968587;
+			
+			// aapt resource value: 0x7f040013
+			public const int editTextWIS = 2130968595;
+			
+			// aapt resource value: 0x7f040014
+			public const int textChaMod = 2130968596;
+			
+			// aapt resource value: 0x7f040009
+			public const int textCharisma = 2130968585;
+			
+			// aapt resource value: 0x7f04000e
+			public const int textConMod = 2130968590;
+			
+			// aapt resource value: 0x7f040006
+			public const int textConstitution = 2130968582;
+			
+			// aapt resource value: 0x7f04000c
+			public const int textDexMod = 2130968588;
+			
+			// aapt resource value: 0x7f040005
+			public const int textDexterity = 2130968581;
+			
+			// aapt resource value: 0x7f040010
+			public const int textIntMod = 2130968592;
+			
+			// aapt resource value: 0x7f040007
+			public const int textIntelligence = 2130968583;
+			
+			// aapt resource value: 0x7f040001
+			public const int textName = 2130968577;
+			
+			// aapt resource value: 0x7f040000
+			public const int textPlaceholder = 2130968576;
+			
+			// aapt resource value: 0x7f04000a
+			public const int textStrMod = 2130968586;
+			
+			// aapt resource value: 0x7f040004
+			public const int textStrength = 2130968580;
+			
+			// aapt resource value: 0x7f040003
+			public const int textVMod = 2130968579;
+			
+			// aapt resource value: 0x7f040016
+			public const int textVScore = 2130968598;
+			
+			// aapt resource value: 0x7f040012
+			public const int textWisMod = 2130968594;
+			
+			// aapt resource value: 0x7f040008
+			public const int textWisdom = 2130968584;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
 		public partial class Layout
 		{
 			
