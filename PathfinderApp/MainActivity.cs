@@ -2,13 +2,10 @@
 using Android.Widget;
 using Android.OS;
 
-namespace PathfinderApp
-{
+namespace PathfinderApp { 
         [Activity(Label = "PathfinderApp", MainLauncher = true)]
-        public class MainActivity : Activity
-        {
-                protected override void OnCreate(Bundle savedInstanceState)
-                {
+        public class MainActivity : Activity {
+                protected override void OnCreate(Bundle savedInstanceState) {
                         base.OnCreate(savedInstanceState);
 
                         // Set our view from the "main" layout resource
