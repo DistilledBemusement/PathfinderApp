@@ -49,11 +49,26 @@ namespace PathfinderApp
 			// aapt resource value: 0x7f040017
 			public const int AddPersonButton = 2130968599;
 			
+			// aapt resource value: 0x7f04001c
+			public const int CharGenButton = 2130968604;
+			
+			// aapt resource value: 0x7f04001e
+			public const int RollButton = 2130968606;
+			
+			// aapt resource value: 0x7f04001d
+			public const int SkillSelectButton = 2130968605;
+			
+			// aapt resource value: 0x7f04001b
+			public const int SkillsListView = 2130968603;
+			
 			// aapt resource value: 0x7f040018
-			public const int CharGenButton = 2130968600;
+			public const int buttonAddNew = 2130968600;
 			
 			// aapt resource value: 0x7f040019
-			public const int SkillSelectButton = 2130968601;
+			public const int buttonDelete = 2130968601;
+			
+			// aapt resource value: 0x7f04001f
+			public const int cbNega = 2130968607;
 			
 			// aapt resource value: 0x7f040015
 			public const int editTextCHA = 2130968597;
@@ -75,6 +90,15 @@ namespace PathfinderApp
 			
 			// aapt resource value: 0x7f040013
 			public const int editTextWIS = 2130968595;
+			
+			// aapt resource value: 0x7f040020
+			public const int etModifier = 2130968608;
+			
+			// aapt resource value: 0x7f04001a
+			public const int listViewCharacter = 2130968602;
+			
+			// aapt resource value: 0x7f040021
+			public const int lvCharacter = 2130968609;
 			
 			// aapt resource value: 0x7f040014
 			public const int textChaMod = 2130968596;

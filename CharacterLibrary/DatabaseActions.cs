@@ -1,26 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using SQLite;
 using System.IO;
-using System.Collections;
 
 namespace CharacterLibrary { 
         public class DatabaseActions {
-                // string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "PFDB1");
+                string dbPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 const string location = "PFDB1";
                 public static string Root { get; set; }
                 SQLiteConnection Connection { get; }
 
                 public DatabaseActions() {
-                        Connection = new SQLiteConnection(Path.Combine(Root, location));
+                        Connection = new SQLiteConnection(Path.Combine(/* dbPath or Root */dbPath, location));
                         Connection.CreateTable<Character>();
                         Connection.CreateTable<Skill>();
                 }
@@ -59,27 +53,30 @@ namespace CharacterLibrary {
                         } return reqSkill;
                 }
 
-                public ArrayList AllSkillGroups() {
+                public String[] AllSkills() {
                         List<Character> allchar = GetAllCharacters();
                         HashSet<string> uni_items = new HashSet<string>();
                         foreach (Character x in allchar) {
                                 foreach (Skill y in x.Skills) {
                                         uni_items.Add(y.Name);
                                 }
-                        } ArrayList sg = new ArrayList();
-                        foreach (string nam in uni_items) {
-                                List<Character> refChar = new List<Character>();
-                                ArrayList sgi = new ArrayList();
-                                foreach (Character x in allchar) {
-                                        foreach (Skill y in x.Skills) {
-                                                if (y.Name.Equals(nam)) {
-                                                        refChar.Add(x);
-                                                }
+                        } String[] list = uni_items.ToArray<String>();
+                        return list;
+                }
+
+                public List<Character> AllSkillGroups(string skillName) {
+                        List<Character> charlist = GetAllCharacters();                        
+                        foreach (Character x in charlist) {
+                                bool InOrOut = false;
+                                foreach (Skill y in x.Skills) {
+                                        if (y.Name.Equals(skillName)) {
+                                                InOrOut = true;
                                         }
-                                } sgi.Add(nam);
-                                sgi.Add(refChar);
-                                sg.Add(sgi);
-                        } return sg;
+                                }
+                                if (InOrOut == false) {
+                                        charlist.Remove(x);
+                                }
+                        } return charlist;
                 }
         }
 }
