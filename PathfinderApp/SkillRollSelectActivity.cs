@@ -34,7 +34,15 @@ namespace PathfinderApp {
                                         //somehow add in a section for extra stuff like items
                                         if (sk.FavouredSkill && sk.Ranks > 0) {
                                                 result += 3;
-                                        } resultContent += "\r\n" + chara.Name + ": " + result;
+                                        }
+                                        if (etModifier.Text != null) {
+                                                if (cbNega.Checked) {
+                                                        result -= Convert.ToInt32(etModifier.Text);
+                                                } else if (cbNega.Checked == false) {
+                                                        result += Convert.ToInt32(etModifier.Text);
+                                                }
+                                        }
+                                        resultContent += "\r\n" + chara.Name + ": " + result;
                                  } Toast.MakeText(this, resultContent, ToastLength.Short);
                         };
 
