@@ -49,26 +49,110 @@ namespace PathfinderApp
 			// aapt resource value: 0x7f040017
 			public const int AddPersonButton = 2130968599;
 			
-			// aapt resource value: 0x7f04001c
-			public const int CharGenButton = 2130968604;
+			// aapt resource value: 0x7f040045
+			public const int CharGenButton = 2130968645;
 			
-			// aapt resource value: 0x7f04001e
-			public const int RollButton = 2130968606;
+			// aapt resource value: 0x7f040044
+			public const int EditPersonButton = 2130968644;
 			
-			// aapt resource value: 0x7f04001d
-			public const int SkillSelectButton = 2130968605;
+			// aapt resource value: 0x7f040047
+			public const int RollButton = 2130968647;
 			
-			// aapt resource value: 0x7f04001b
-			public const int SkillsListView = 2130968603;
+			// aapt resource value: 0x7f040046
+			public const int SkillSelectButton = 2130968646;
 			
-			// aapt resource value: 0x7f040018
-			public const int buttonAddNew = 2130968600;
-			
-			// aapt resource value: 0x7f040019
-			public const int buttonDelete = 2130968601;
+			// aapt resource value: 0x7f04002c
+			public const int SkillsListView = 2130968620;
 			
 			// aapt resource value: 0x7f04001f
-			public const int cbNega = 2130968607;
+			public const int btnAddSkill = 2130968607;
+			
+			// aapt resource value: 0x7f040028
+			public const int btnDeleteCharacter = 2130968616;
+			
+			// aapt resource value: 0x7f040027
+			public const int btnEditCharacter = 2130968615;
+			
+			// aapt resource value: 0x7f040029
+			public const int buttonAddNew = 2130968617;
+			
+			// aapt resource value: 0x7f04002a
+			public const int buttonDelete = 2130968618;
+			
+			// aapt resource value: 0x7f04001b
+			public const int cbFS = 2130968603;
+			
+			// aapt resource value: 0x7f040048
+			public const int cbNega = 2130968648;
+			
+			// aapt resource value: 0x7f040042
+			public const int eceditTextCHA = 2130968642;
+			
+			// aapt resource value: 0x7f04003c
+			public const int eceditTextCON = 2130968636;
+			
+			// aapt resource value: 0x7f04003a
+			public const int eceditTextDEX = 2130968634;
+			
+			// aapt resource value: 0x7f04003e
+			public const int eceditTextINT = 2130968638;
+			
+			// aapt resource value: 0x7f04002f
+			public const int eceditTextName = 2130968623;
+			
+			// aapt resource value: 0x7f040038
+			public const int eceditTextSTR = 2130968632;
+			
+			// aapt resource value: 0x7f040040
+			public const int eceditTextWIS = 2130968640;
+			
+			// aapt resource value: 0x7f040041
+			public const int ectextChaMod = 2130968641;
+			
+			// aapt resource value: 0x7f040036
+			public const int ectextCharisma = 2130968630;
+			
+			// aapt resource value: 0x7f04003b
+			public const int ectextConMod = 2130968635;
+			
+			// aapt resource value: 0x7f040033
+			public const int ectextConstitution = 2130968627;
+			
+			// aapt resource value: 0x7f040039
+			public const int ectextDexMod = 2130968633;
+			
+			// aapt resource value: 0x7f040032
+			public const int ectextDexterity = 2130968626;
+			
+			// aapt resource value: 0x7f04003d
+			public const int ectextIntMod = 2130968637;
+			
+			// aapt resource value: 0x7f040034
+			public const int ectextIntelligence = 2130968628;
+			
+			// aapt resource value: 0x7f04002e
+			public const int ectextName = 2130968622;
+			
+			// aapt resource value: 0x7f04002d
+			public const int ectextPlaceholder = 2130968621;
+			
+			// aapt resource value: 0x7f040037
+			public const int ectextStrMod = 2130968631;
+			
+			// aapt resource value: 0x7f040031
+			public const int ectextStrength = 2130968625;
+			
+			// aapt resource value: 0x7f040030
+			public const int ectextVMod = 2130968624;
+			
+			// aapt resource value: 0x7f040043
+			public const int ectextVScore = 2130968643;
+			
+			// aapt resource value: 0x7f04003f
+			public const int ectextWisMod = 2130968639;
+			
+			// aapt resource value: 0x7f040035
+			public const int ectextWisdom = 2130968629;
 			
 			// aapt resource value: 0x7f040015
 			public const int editTextCHA = 2130968597;
@@ -91,14 +175,23 @@ namespace PathfinderApp
 			// aapt resource value: 0x7f040013
 			public const int editTextWIS = 2130968595;
 			
-			// aapt resource value: 0x7f040020
-			public const int etModifier = 2130968608;
+			// aapt resource value: 0x7f040049
+			public const int etModifier = 2130968649;
 			
-			// aapt resource value: 0x7f04001a
-			public const int listViewCharacter = 2130968602;
+			// aapt resource value: 0x7f04001c
+			public const int etSkillName = 2130968604;
 			
-			// aapt resource value: 0x7f040021
-			public const int lvCharacter = 2130968609;
+			// aapt resource value: 0x7f04002b
+			public const int listViewCharacter = 2130968619;
+			
+			// aapt resource value: 0x7f04004a
+			public const int lvCharacter = 2130968650;
+			
+			// aapt resource value: 0x7f04001d
+			public const int spinnerAttribute = 2130968605;
+			
+			// aapt resource value: 0x7f04001e
+			public const int spinnerRanks = 2130968606;
 			
 			// aapt resource value: 0x7f040014
 			public const int textChaMod = 2130968596;
@@ -148,6 +241,36 @@ namespace PathfinderApp
 			// aapt resource value: 0x7f040008
 			public const int textWisdom = 2130968584;
 			
+			// aapt resource value: 0x7f040026
+			public const int tvCharisma = 2130968614;
+			
+			// aapt resource value: 0x7f040023
+			public const int tvConstitution = 2130968611;
+			
+			// aapt resource value: 0x7f040022
+			public const int tvDexterity = 2130968610;
+			
+			// aapt resource value: 0x7f040024
+			public const int tvIntelligence = 2130968612;
+			
+			// aapt resource value: 0x7f040020
+			public const int tvName = 2130968608;
+			
+			// aapt resource value: 0x7f040019
+			public const int tvSA = 2130968601;
+			
+			// aapt resource value: 0x7f040018
+			public const int tvSN = 2130968600;
+			
+			// aapt resource value: 0x7f04001a
+			public const int tvSR = 2130968602;
+			
+			// aapt resource value: 0x7f040021
+			public const int tvStrength = 2130968609;
+			
+			// aapt resource value: 0x7f040025
+			public const int tvWisdom = 2130968613;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -168,28 +291,25 @@ namespace PathfinderApp
 			public const int AddSkill = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int CharacterDelete = 2130837506;
+			public const int CharacterInformation = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int CharacterInformation = 2130837507;
+			public const int CharGen = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int CharGen = 2130837508;
+			public const int DiceRoller = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int DiceRoller = 2130837509;
+			public const int EditCharacter = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int EditCharacter = 2130837510;
+			public const int EditSkill = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int EditSkill = 2130837511;
+			public const int Main = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int Main = 2130837512;
-			
-			// aapt resource value: 0x7f020009
-			public const int SkillRollSelect = 2130837513;
+			public const int SkillRollSelect = 2130837512;
 			
 			static Layout()
 			{

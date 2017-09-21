@@ -1,7 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</LinearLayout>
+    <TextView
+        android:text="Name:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:padding="25px" />
+    <TextView
+        android:text="STR:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:id="@+id/tvStrength"
+        android:padding="25px" />
+    <TextView
+        android:text="DEX:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvName"
+        android:id="@+id/tvDexterity"
+        android:padding="25px" />
+    <TextView
+        android:text="CON:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvName"
+        android:id="@+id/tvConstitution"
+        android:padding="25px" />
+    <TextView
+        android:text="INT:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvStrength"
+        android:id="@+id/tvIntelligence"
+        android:padding="25px" />
+    <TextView
+        android:text="WIS:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDexterity"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvWisdom"
+        android:padding="25px" />
+    <TextView
+        android:text="CHA:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvConstitution"
+        android:layout_alignParentRight="true"
+        android:id="@+id/tvCharisma"
+        android:padding="25px" />
+    <Button
+        android:text="Edit Character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCharisma"
+        android:id="@+id/btnEditCharacter" />
+    <Button
+        android:text="Delete Character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEditCharacter"
+        android:id="@+id/btnDeleteCharacter" />
+</RelativeLayout>

@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</LinearLayout>
+    <TextView
+        android:text="Skill Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSN"
+        android:padding="25px" />
+    <TextView
+        android:text="Attribute"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSN"
+        android:id="@+id/tvSA"
+        android:padding="25px" />
+    <TextView
+        android:text="Ranks"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSA"
+        android:id="@+id/tvSR"
+        android:padding="25px" />
+    <CheckBox
+        android:text="Favoured Skill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSR"
+        android:id="@+id/cbFS"
+        android:paddingBottom="25px"
+        android:paddingTop="25px" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvSN"
+        android:id="@+id/etSkillName" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvSN"
+        android:layout_below="@id/tvSN"
+        android:id="@+id/spinnerAttribute"
+        android:layout_alignBottom="@id/tvSA" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvSN"
+        android:layout_below="@id/spinnerAttribute"
+        android:id="@+id/spinnerRanks"
+        android:layout_alignBottom="@id/tvSR" />
+    <Button
+        android:text="Add Skill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbFS"
+        android:id="@+id/btnAddSkill" />
+</RelativeLayout>

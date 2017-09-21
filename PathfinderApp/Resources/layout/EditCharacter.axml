@@ -1,7 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</LinearLayout>
+    <TextView
+        android:text="Constitution"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15px"
+        android:id="@+id/ectextPlaceholder"
+        android:visibility="invisible" />
+    <TextView
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15px"
+        android:id="@+id/ectextName" />
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextPlaceholder"
+        android:padding="15px"
+        android:id="@+id/eceditTextName" />
+    <TextView
+        android:text="Modifier"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ectextVMod"
+        android:layout_alignParentRight="true"
+        android:padding="15px"
+        android:layout_below="@id/eceditTextName" />
+    <TextView
+        android:text="Strength"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextVMod"
+        android:padding="15px"
+        android:id="@+id/ectextStrength" />
+    <TextView
+        android:text="Dexterity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextStrength"
+        android:padding="15px"
+        android:id="@+id/ectextDexterity" />
+    <TextView
+        android:text="Constitution"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextDexterity"
+        android:padding="15px"
+        android:id="@+id/ectextConstitution" />
+    <TextView
+        android:text="Intelligence"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextConstitution"
+        android:padding="15px"
+        android:id="@+id/ectextIntelligence" />
+    <TextView
+        android:text="Wisdom"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextIntelligence"
+        android:padding="15px"
+        android:id="@+id/ectextWisdom" />
+    <TextView
+        android:text="Charisma"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextWisdom"
+        android:padding="15px"
+        android:id="@+id/ectextCharisma" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextVMod"
+        android:id="@+id/ectextStrMod"
+        android:padding="10px"
+        android:layout_alignStart="@id/ectextVMod"
+        android:textAlignment="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextConstitution"
+        android:padding="15px"
+        android:layout_below="@+id/ectextVMod"
+        android:id="@+id/eceditTextSTR"
+        android:layout_toLeftOf="@id/ectextStrMod" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextStrMod"
+        android:id="@+id/ectextDexMod"
+        android:padding="10px"
+        android:layout_alignStart="@id/ectextVMod"
+        android:textAlignment="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextConstitution"
+        android:padding="15px"
+        android:layout_below="@+id/ectextStrength"
+        android:id="@+id/eceditTextDEX"
+        android:layout_toLeftOf="@id/ectextDexMod" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextDexMod"
+        android:id="@+id/ectextConMod"
+        android:padding="10px"
+        android:layout_alignStart="@id/ectextVMod"
+        android:textAlignment="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextConstitution"
+        android:padding="15px"
+        android:layout_below="@+id/ectextDexterity"
+        android:id="@+id/eceditTextCON"
+        android:layout_toLeftOf="@id/ectextConMod" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextConMod"
+        android:id="@+id/ectextIntMod"
+        android:padding="10px"
+        android:layout_alignStart="@id/ectextVMod"
+        android:textAlignment="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextConstitution"
+        android:padding="15px"
+        android:layout_below="@+id/ectextConstitution"
+        android:id="@+id/eceditTextINT"
+        android:layout_toLeftOf="@id/ectextIntMod" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextIntMod"
+        android:id="@+id/ectextWisMod"
+        android:padding="10px"
+        android:layout_alignStart="@id/ectextVMod"
+        android:textAlignment="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextConstitution"
+        android:padding="15px"
+        android:layout_below="@+id/ectextIntelligence"
+        android:id="@+id/eceditTextWIS"
+        android:layout_toLeftOf="@id/ectextWisMod" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextWisMod"
+        android:id="@+id/ectextChaMod"
+        android:padding="10px"
+        android:layout_alignStart="@id/ectextVMod"
+        android:textAlignment="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextConstitution"
+        android:padding="15px"
+        android:layout_below="@+id/ectextWisdom"
+        android:id="@+id/eceditTextCHA"
+        android:layout_toLeftOf="@id/ectextChaMod" />
+    <TextView
+        android:text="Attribute Score"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ectextConstitution"
+        android:id="@+id/ectextVScore"
+        android:padding="15px"
+        android:layout_below="@id/eceditTextName" />
+    <Button
+        android:text="Edit Person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ectextCharisma"
+        android:id="@+id/EditPersonButton"
+        android:padding="15px" />
+</RelativeLayout>

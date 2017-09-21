@@ -12,7 +12,9 @@ using CharacterLibrary;
 
 namespace PathfinderApp {
         [Activity(Label = "CharGenActivity")]
-        public class CharGenActivity : Activity {
+        public class CharGenActivity : ListActivity {
+                DatabaseActions instance = new DatabaseActions();
+                List<Character> charList = null;
                 protected override void OnCreate(Bundle savedInstanceState) {
                         base.OnCreate(savedInstanceState);
                         SetContentView(Resource.Layout.CharGen);
@@ -20,21 +22,20 @@ namespace PathfinderApp {
                         Button AddCharacterButton = FindViewById<Button>(Resource.Id.buttonAddNew);
                         Button DeleteCharacterButton = FindViewById<Button>(Resource.Id.buttonDelete);
                         ListView CharacterList = FindViewById<ListView>(Resource.Id.listViewCharacter);
-                        List<Character> charList = instance.GetAllCharacters();
-                        // seriously this is hard
+                        charList = instance.GetAllCharacters();
+                        var ListAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, charList);
 
                         AddCharacterButton.Click += (sender, e) => {
                                 var intent = new Intent(this, typeof(AddCharacterActivity));
                                 StartActivity(intent);
                         };
-
-                        DeleteCharacterButton.Click += (sender, e) => {
-                                var intent = new Intent(this, typeof(CharacterDeleteActivity));
-                                StartActivity(intent);
-                        };
-
-                        //var items = instance.GetAllCharacters().ToList<Character>();
-                        //var ListAdapter = new ArrayAdapter<String>(this, );
+                }
+        
+                protected override void OnListItemClick(ListView l, View v, int position, long id) {
+                        int pos = charList[position].ID;
+                        var CharInfo = new Intent(this, typeof(CharacterInformationActivity));
+                        CharInfo.PutExtra("Character", pos);
+                        StartActivity(CharInfo);
                 }
         }
 }

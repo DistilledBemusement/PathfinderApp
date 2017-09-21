@@ -5,34 +5,40 @@ using Android.Widget;
 using CharacterLibrary;
 using System;
 
-namespace PathfinderApp
-{
+namespace PathfinderApp {
         [Activity(Label = "AddCharacterActivity")]
         public class AddCharacterActivity : Activity {
+                DatabaseActions instance = new DatabaseActions();
                 protected override void OnCreate(Bundle savedInstanceState) {
                         base.OnCreate(savedInstanceState);
-
-                        // Create your application here
                         SetContentView(Resource.Layout.AddCharacter);
                         Character newCharacter = new Character();
                         Button AddPersonButton = FindViewById<Button>(Resource.Id.AddPersonButton);
-                        EditText editName = FindViewById<EditText>(Resource.Id.editTextName);
-                        EditText editSTR = FindViewById<EditText>(Resource.Id.editTextSTR);
-                        EditText editDEX = FindViewById<EditText>(Resource.Id.editTextDEX);
-                        EditText editCON = FindViewById<EditText>(Resource.Id.editTextCON);
-                        EditText editINT = FindViewById<EditText>(Resource.Id.editTextINT);
-                        EditText editWIS = FindViewById<EditText>(Resource.Id.editTextWIS);
-                        EditText editCHA = FindViewById<EditText>(Resource.Id.editTextCHA);
-                        TextView textStrMod = FindViewById<TextView>(Resource.Id.textStrMod);
-                        TextView textDexMod = FindViewById<TextView>(Resource.Id.textDexMod);
-                        TextView textConMod = FindViewById<TextView>(Resource.Id.textConMod);
-                        TextView textIntMod = FindViewById<TextView>(Resource.Id.textIntMod);
-                        TextView textWisMod = FindViewById<TextView>(Resource.Id.textWisMod);
-                        TextView textChaMod = FindViewById<TextView>(Resource.Id.textChaMod);
+                        EditText editName, editSTR, editDEX, editCON, editINT, editWIS, editCHA;
+                        TextView textStrMod, textDexMod, textConMod, textIntMod, textWisMod, textChaMod;
+                        editName = FindViewById<EditText>(Resource.Id.editTextName);
+                        editSTR = FindViewById<EditText>(Resource.Id.editTextSTR);
+                        editDEX = FindViewById<EditText>(Resource.Id.editTextDEX);
+                        editCON = FindViewById<EditText>(Resource.Id.editTextCON);
+                        editINT = FindViewById<EditText>(Resource.Id.editTextINT);
+                        editWIS = FindViewById<EditText>(Resource.Id.editTextWIS);
+                        editCHA = FindViewById<EditText>(Resource.Id.editTextCHA);
+                        textStrMod = FindViewById<TextView>(Resource.Id.textStrMod);
+                        textDexMod = FindViewById<TextView>(Resource.Id.textDexMod);
+                        textConMod = FindViewById<TextView>(Resource.Id.textConMod);
+                        textIntMod = FindViewById<TextView>(Resource.Id.textIntMod);
+                        textWisMod = FindViewById<TextView>(Resource.Id.textWisMod);
+                        textChaMod = FindViewById<TextView>(Resource.Id.textChaMod);
 
                         AddPersonButton.Click += (sender, e) => {
-                                // For when you can add the newCharacter to the database
-
+                                newCharacter.Name = editName.Text;
+                                newCharacter.STR.AttributeScore = Convert.ToInt32(editSTR.Text);
+                                newCharacter.DEX.AttributeScore = Convert.ToInt32(editDEX.Text);
+                                newCharacter.CON.AttributeScore = Convert.ToInt32(editCON.Text);
+                                newCharacter.INT.AttributeScore = Convert.ToInt32(editINT.Text);
+                                newCharacter.WIS.AttributeScore = Convert.ToInt32(editWIS.Text);
+                                newCharacter.CHA.AttributeScore = Convert.ToInt32(editCHA.Text);
+                                instance.CharacterCreate(this, newCharacter);
                                 var intent = new Intent(this, typeof(CharGenActivity));
                                 StartActivity(intent);
                         };
@@ -68,7 +74,7 @@ namespace PathfinderApp
                                 CharacterAttribute newAttr = new CharacterAttribute(Convert.ToInt32(editSTR.Text));
                                 newCharacter.CHA = newAttr;
                                 textChaMod.Text = Convert.ToString(newAttr.AttributeModifer);
-                        };
+                        }; 
                 }
         }
 }
